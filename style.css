@@ -115,6 +115,24 @@ img { max-width: 100%; display: block; }
   margin-top: 24px;
 }
 
+.metric {
+  background: #1f1f1f;
+  border: 1px solid #2d2d2d;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric strong {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.tattoo-session .section-title {
+  margin-bottom: 1rem;
+}
+
 .session-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -184,6 +202,7 @@ img { max-width: 100%; display: block; }
 .session-specs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   padding: 0;
 }
@@ -239,6 +258,143 @@ img { max-width: 100%; display: block; }
   grid-template-columns: 140px 1fr;
   gap: 0;
   align-items: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.session-card-media {
+  position: relative;
+  min-height: 100%;
+}
+
+.session-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.session-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.session-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.session-tag {
+  background: #1f1f1f;
+  border: 1px solid #2d2d2d;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.session-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #b5b5b5;
+}
+
+.session-steps {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #181818;
+  border: 1px solid #242424;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.session-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  background: #1f1f1f;
+  border: 1px solid #2d2d2d;
+  border-radius: 999px;
+  padding: 4px;
+  height: 10px;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #f3d48b);
+  border-radius: 999px;
+}
+
+.session-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ghost-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #3a3a3a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ghost-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.session-card {
+  background: #161616;
+  border: 1px solid #242424;
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: stretch;
   cursor: pointer;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
