@@ -70,15 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxImg = document.getElementById('lightbox-img');
   const closeBtn = document.querySelector('.close');
 
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('img');
-      if (!img || !img.src) return;
+  const openLightbox = fullSrc => {
+    if (!lightbox || !lightboxImg || !fullSrc) return;
+    lightboxImg.src = fullSrc;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  };
 
-      lightboxImg.src = img.dataset.full;
-      lightbox.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    });
+  document.addEventListener('click', event => {
+    const trigger = event.target.closest('[data-lightbox]');
+    if (!trigger) return;
+
+    const fullSrc = trigger.dataset.full
+      || trigger.getAttribute('src')
+      || trigger.querySelector('img')?.src;
+
+    if (!fullSrc) return;
+    event.preventDefault();
+    openLightbox(fullSrc);
   });
 
   if (closeBtn && lightbox) {
