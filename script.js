@@ -40,6 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   lazyImages.forEach(img => imageObserver.observe(img));
 
+  /* Fade-in suave após o carregamento das imagens da galeria */
+  const progressiveImages = document.querySelectorAll('.gallery-item img');
+
+  const markAsLoaded = img => img.classList.add('is-loaded');
+
+  progressiveImages.forEach(img => {
+    if (img.complete && img.naturalWidth) {
+      markAsLoaded(img);
+      return;
+    }
+
+    img.addEventListener('load', () => markAsLoaded(img), { once: true });
+  });
+
   /* =========================
      ANIMAÇÕES DE SCROLL
   ========================== */
