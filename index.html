@@ -30,7 +30,7 @@
             <li><a href="#about">Sobre</a></li>
             <li><a href="#gallery">Galeria</a></li>
             <li><a href="#services">Serviços</a></li>
-            <li><a href="" class="btn-cta">Agendar</a></li>
+            <li><a href="#contact" class="btn-cta">Agendar</a></li>
         </ul>
     </nav>
 </header>
@@ -62,50 +62,192 @@
     </div>
 </section>
 
-<section id="gallery" class="section bg-darker">
+<section id="gallery" class="section bg-darker tattoo-session">
   <div class="container">
-    <h2 class="section-title title-gallery" data-animate="up">
-      TATTOOS
-    </h2>
+    <div class="session-header" data-animate="up">
+      <p class="eyebrow">Sessão tattoo</p>
+      <h2 class="section-title title-gallery">Tatuagem em tempo real</h2>
+      <p class="session-lead">
+        Processo completo: briefing, design exclusivo, aplicação segura e cuidados pós-sessão guiados. 
+        Todo o fluxo foi pensado para dar clareza do que acontece em cada etapa.
+      </p>
 
-    <div class="gallery-grid" data-animate="up">
+      <div class="session-metrics">
+        <div class="metric">
+          <strong>+320</strong>
+          <span>Sessões finalizadas</span>
+        </div>
+        <div class="metric">
+          <strong>4h</strong>
+          <span>Média por peça</span>
+        </div>
+        <div class="metric">
+          <strong>Bio-Safe</strong>
+          <span>Materiais descartáveis</span>
+        </div>
+      </div>
+    </div>
 
-      <div class="gallery-item">
-        <img 
+    <div class="session-grid">
+      <article class="session-feature" data-animate="left">
+        <div class="session-feature-image" data-lightbox data-full="assets/images/tattoo-1.jpg">
+          <img 
             src="assets/images/tattoo-1.jpg"
             loading="lazy"
             decoding="async"
-            alt="Tatuagem Blackwork"
-        >
-      </div>
+            alt="Tatuagem Blackwork geométrica no antebraço"
+          >
+          <span class="session-chip">Blackwork</span>
+          <span class="session-chip secondary">Antebraço</span>
+        </div>
 
-      <div class="gallery-item">
-        <img 
-            src="assets/images/tattoo-2.jpg"
-            loading="lazy"
-            decoding="async"
-            alt="Tatuagem Blackwork"
-        >
-      </div>
+        <div class="session-feature-body">
+          <h3>Blackwork geométrico</h3>
+          <p>
+            Linhas sólidas, sombras suaves e foco em encaixe anatômico do antebraço.
+            Toda a sessão é guiada por referências digitais validadas antes de encostar a agulha.
+          </p>
 
-      <div class="gallery-item">
-        <img 
-            src="assets/images/tattoo-3.jpg"
-            loading="lazy"
-            decoding="async"
-            alt="Tatuagem Blackwork"
-        >
-      </div>
+          <ul class="session-specs">
+            <li><span>Tempo:</span> 3h20</li>
+            <li><span>Tamanho:</span> 14cm</li>
+            <li><span>Dor:</span> 6/10 (técnica de respiração guiada)</li>
+          </ul>
 
-      <div class="gallery-item">
-        <img 
-            src="assets/images/tattoo-4.jpg"
-            loading="lazy"
-            decoding="async"
-            alt="Tatuagem Blackwork"
-        >
+          <div class="session-progress">
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>Traço</span><span>90%</span>
+              </div>
+              <div class="progress-bar"><span style="width: 90%"></span></div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>Sombra</span><span>70%</span>
+              </div>
+              <div class="progress-bar"><span style="width: 70%"></span></div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>Cicatrização</span><span>100%</span>
+              </div>
+              <div class="progress-bar"><span style="width: 100%"></span></div>
+            </div>
+          </div>
+
+          <div class="session-actions">
+            <a href="https://wa.me/5531995281748?text=Quero%20agendar%20uma%20sess%C3%A3o%20blackwork!" class="btn-outline">Agendar essa vibe</a>
+            <button class="ghost-btn" data-lightbox data-full="assets/images/tattoo-1.jpg">Ver em alta</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="session-list" data-animate="right">
+        <article class="session-card" data-lightbox data-full="assets/images/tattoo-2.jpg">
+          <div class="session-card-media">
+            <img 
+              src="assets/images/tattoo-2.jpg"
+              loading="lazy"
+              decoding="async"
+              alt="Tatuagem fine line em ombro"
+            >
+            <span class="session-chip">Fine Line</span>
+          </div>
+          <div class="session-card-body">
+            <div class="session-card-head">
+              <h4>Florais delicados</h4>
+              <span class="session-tag">Ombro</span>
+            </div>
+            <p>Linhas finas com pressão calibrada para não abrir com o tempo.</p>
+            <div class="session-meta">
+              <span>2h</span>
+              <span>9cm</span>
+              <span>Cicatrização guiada</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="session-card" data-lightbox data-full="assets/images/tattoo-3.jpg">
+          <div class="session-card-media">
+            <img 
+              src="assets/images/tattoo-3.jpg"
+              loading="lazy"
+              decoding="async"
+              alt="Tatuagem geek em braço"
+            >
+            <span class="session-chip secondary">Geek Tattoo</span>
+          </div>
+          <div class="session-card-body">
+            <div class="session-card-head">
+              <h4>Geek Tattoo</h4>
+              <span class="session-tag">Braço</span>
+            </div>
+            <p>Sombras marcadas e textura com agulha magnum para dar volume.</p>
+            <div class="session-meta">
+              <span>3h</span>
+              <span>17cm</span>
+              <span>Referência aprovada</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="session-card" data-lightbox data-full="assets/images/tattoo-4.jpg">
+          <div class="session-card-media">
+            <img 
+              src="assets/images/tattoo-4.jpg"
+              loading="lazy"
+              decoding="async"
+              alt="Tatuagem blackwork em perna"
+            >
+            <span class="session-chip">Blackwork</span>
+          </div>
+          <div class="session-card-body">
+            <div class="session-card-head">
+              <h4>Old School Bold</h4>
+              <span class="session-tag">Perna</span>
+            </div>
+            <p>Preto sólido com saturação dupla para longevidade real.</p>
+            <div class="session-meta">
+              <span>2h45</span>
+              <span>12cm</span>
+              <span>Aftercare detalhado</span>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
+
+    <div class="session-steps" data-animate="up">
+      <div class="step">
+        <i class="fas fa-comments"></i>
+        <div>
+          <h4>Briefing rápido</h4>
+          <p>Definimos ideia, tamanho e posição em menos de 10 minutos.</p>
+        </div>
+      </div>
+      <div class="step">
+        <i class="fas fa-tablet-alt"></i>
+        <div>
+          <h4>Desenho validado</h4>
+          <p>Você aprova o rascunho digital antes de aplicar no decalque.</p>
+        </div>
+      </div>
+      <div class="step">
+        <i class="fas fa-droplet"></i>
+        <div>
+          <h4>Aplicação precisa</h4>
+          <p>Agulhas novas, biossegurança e ritmo controlado para dor suportável.</p>
+        </div>
+      </div>
+      <div class="step">
+        <i class="fas fa-leaf"></i>
+        <div>
+          <h4>Cuidados guiados</h4>
+          <p>Checklist de curativo, pomada e fotos de acompanhamento por WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div id="lightbox" class="lightbox">
