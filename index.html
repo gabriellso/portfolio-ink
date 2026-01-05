@@ -10,6 +10,14 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
+    <link 
+        rel="preload" 
+        as="image" 
+        href="assets/images/banner-fundo.webp" 
+        imagesrcset="assets/images/banner-fundo.webp" 
+        imagesizes="100vw"
+    >
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,6 +44,18 @@
 </header>
 
 <section id="home" class="hero">
+    <img 
+        src="assets/images/banner-fundo.webp" 
+        alt="" 
+        class="hero-bg"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        width="3024"
+        height="4032"
+        sizes="100vw"
+    >
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content" data-animate="up">
         <h1 class="hero-title">
         <span class="line-1">ONDE IDEIAS EXCLUSIVAS</span>
