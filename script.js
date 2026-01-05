@@ -21,27 +21,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =========================
-     LAZY LOAD REAL
+     LAZY LOAD REAL (img + picture)
   ========================== */
-  const lazyImages = document.querySelectorAll('img[data-src]');
+  const lazyPictures = document.querySelectorAll('picture[data-lazy]');
 
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
+  const loadPicture = picture => {
+    const img = picture.querySelector('img[data-src]');
+    const sources = picture.querySelectorAll('source[data-srcset]');
 
-      const img = entry.target;
+    sources.forEach(source => {
+      source.srcset = source.dataset.srcset;
+      source.removeAttribute('data-srcset');
+    });
+
+    if (img) {
       img.src = img.dataset.src;
       img.removeAttribute('data-src');
-      observer.unobserve(img);
+    }
+  };
+
+  const mediaObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      loadPicture(entry.target);
+      observer.unobserve(entry.target);
     });
   }, {
-    rootMargin: '200px'
+    rootMargin: '200px 0px'
   });
 
-  lazyImages.forEach(img => imageObserver.observe(img));
+  lazyPictures.forEach(picture => mediaObserver.observe(picture));
 
   /* Fade-in suave após o carregamento das imagens da galeria */
-  const progressiveImages = document.querySelectorAll('.gallery-item img');
+  const progressiveImages = document.querySelectorAll('.gallery-item img, .carousel-item img');
 
   const markAsLoaded = img => img.classList.add('is-loaded');
 
@@ -84,14 +96,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxImg = document.getElementById('lightbox-img');
   const closeBtn = document.querySelector('.close');
 
-  document.querySelectorAll('.gallery-item').forEach(item => {
+  const openLightbox = img => {
+    if (!img || !img.dataset.full) return;
+    lightboxImg.src = img.dataset.full;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  };
+
+  document.querySelectorAll('.gallery-item, .carousel-item').forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
-      if (!img || !img.src) return;
-
-      lightboxImg.src = img.dataset.full;
-      lightbox.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+      openLightbox(img);
     });
   });
 
