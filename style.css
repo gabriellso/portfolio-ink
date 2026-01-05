@@ -419,14 +419,6 @@ img { max-width: 100%; display: block; }
   max-width: 520px;
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-
 .gallery-subtitle {
   color: #c7c7c7;
   max-width: 520px;
