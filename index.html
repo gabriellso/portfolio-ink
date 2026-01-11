@@ -69,7 +69,15 @@
 <section id="about" class="section container">
     <div class="about-grid">
         <div class="about-img" data-animate="left">
-            <img src="assets/images/foto-caio.webp" alt="Tatuador Caio">
+            <img 
+                src="assets/images/foto-caio.webp" 
+                alt="Tatuador Caio"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                width="1301"
+                height="1290"
+            >
         </div>
 
         <div class="about-text" data-animate="right">
@@ -181,7 +189,7 @@
 
 <div id="lightbox" class="lightbox">
     <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
+    <img class="lightbox-content" id="lightbox-img" alt="Visualização ampliada da tatuagem" decoding="async" loading="lazy">
 </div>
 
 <section id="services" class="section container">
